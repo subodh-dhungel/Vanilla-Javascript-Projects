@@ -1,0 +1,76 @@
+html{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.calcBody{
+    width: 380px;
+    border: 1px solid red;
+    padding: 20px;
+    background-color: rgba(165, 42, 42, 0.733);
+    border-radius: 20px;
+}
+
+.numDisplay{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.prevOper{
+    text-align: end;
+    padding: 1px;
+    background-color: rgb(85, 70, 70);
+    padding-right: 5px;
+    display: block;
+}
+
+.currOper{
+    text-align: end;
+    font-weight: bold;
+    height: 60px;
+    font-size: 32px;
+    background-color: rgb(87, 59, 59);
+    padding-right: 5px;
+    display: block;
+}
+
+.Keypad{
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    row-gap: 20px;
+    column-gap: 20px;
+    background-color: rgba(165, 42, 42, 0.733);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.button{
+    background-color: rgba(0, 0, 0, 0.800);
+    border-radius: 15px;
+    height: 50px;
+    user-select: none;
+}
+
+.button:hover{
+    background-color: rgba(0, 0, 0, 0.527);
+}
