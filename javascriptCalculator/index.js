@@ -25,20 +25,26 @@ operatorButtons.forEach(button=>{
     })
 })
 
+
 equalsButton.addEventListener('click', ()=>{
     let result
     let secondOper = currOper.value
-    if(operator === '/' && firstOper !== '' && secondOper !== ''){
-        result = Number.parseInt(firstOper) / Number.parseInt(secondOper)
-        currOper.value = result
-    }else if(operator === 'x' && firstOper !== '' && secondOper !== ''){
-        result = Number.parseInt(firstOper) * Number.parseInt(secondOper)
-        currOper.value = result
-    }else if(operator === '+' && firstOper !== '' && secondOper !== ''){
-        result = Number.parseInt(firstOper) + Number.parseInt(secondOper)
-        currOper.value = result
-    }else if(operator === '-' && firstOper !== '' && secondOper !== ''){
-        result = Number.parseInt(firstOper) - Number.parseInt(secondOper)
-        currOper.value = result
+    try{
+        if(operator === '/' && firstOper !== '' && secondOper !== ''){
+            result = Number.parseInt(firstOper) / Number.parseInt(secondOper)
+            currOper.value = result
+        }else if(operator === 'x' && firstOper !== '' && secondOper !== ''){
+            result = Number.parseInt(firstOper) * Number.parseInt(secondOper)
+            currOper.value = result
+        }else if(operator === '+' && firstOper !== '' && secondOper !== ''){
+            result = Number.parseInt(firstOper) + Number.parseInt(secondOper)
+            currOper.value = result
+        }else if(operator === '-' && firstOper !== '' && secondOper !== ''){
+            result = Number.parseInt(firstOper) - Number.parseInt(secondOper)
+            currOper.value = result
+        }
+    }catch(e){
+        console.log(e)
+        alert('insert valid number')
     }
 })
