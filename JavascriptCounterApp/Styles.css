@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rebeccapurple;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+}
+
+.counterWrapper{
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 100px;
+}
+
+.counterWrapper > h1 {
+    position: relative;
+    top: 30%;
+}
+
+.buttonControls{
+    display: flex;
+    grid-column: 2;
+    grid-row: 3;
+    justify-content: space-around;
+}
+
+#incrementButton,#decrementButton{
+    border: 0px;
+    background-color: red;
+    color: aliceblue;
+    padding: 10px;
+    display: block;
+    height: 35px;
+    border-radius: 10px;
+}
+
+#incrementButton:active, #decrementButton:active{
+    opacity: 0.7;
+    transform: scale3d(1,1, 100);
+}
+
